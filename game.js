@@ -6,6 +6,8 @@ function game()
 	var HEIGHT = 800;
 	var FPS = 25;
 		
+	var txt = "";	
+	
 	var canvas = null;
 		
 	(function main()
@@ -22,7 +24,7 @@ function game()
 		
 		if(annyang)
 		{
-			var commands = {"jump" : function(){alert("jump");}};
+			var commands = {"jump" : function(){txt = "jump";}};
 			
 			annyang.addCommands(commands);
 			annyang.start();
@@ -39,7 +41,7 @@ function game()
 	function draw()
 	{
 		canvas.fillStyle = "#000";
-		canvas.fillText("what up dog", 100, 100);
+		canvas.fillText("text", 100, 100);
 	}
 	
 	function update()
