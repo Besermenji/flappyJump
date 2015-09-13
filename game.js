@@ -24,13 +24,26 @@ function game()
 		
 		if(annyang)
 		{
-			var commands = {"jump" : function(){txt = "jump";}};
+			var commands = {"jump" : function(){player.y += 6;}};
 			
 			annyang.addCommands(commands);
 			annyang.start();
 		}
 		
 	}
+	
+var player = {
+	color: "#00A",
+	x: 220,
+	y: 270,
+	width: 32,
+	height: 32,
+	draw: function() 
+	{
+		canvas.fillStyle = this.color;
+		canvas.fillRect(this.x, this.y, this.width, this.height);
+	}
+};
 	
 	function gameLoop()
 	{
@@ -40,8 +53,8 @@ function game()
 	
 	function draw()
 	{
-		canvas.fillStyle = "#000";
-		canvas.fillText(txt, 100, 100);
+		canvas.clearRect(0, 0, WIDTH, HEIGHT);
+  		player.draw();
 	}
 	
 	function update()
