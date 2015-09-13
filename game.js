@@ -41,7 +41,7 @@ function game()
 	function draw()
 	{
 		canvas.fillStyle = "#000";
-		canvas.fillText("text", 100, 100);
+		canvas.fillText(txt, 100, 100);
 	}
 	
 	function update()
